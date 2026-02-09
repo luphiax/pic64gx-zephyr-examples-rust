@@ -6,19 +6,22 @@ manifest:
     west-commands: scripts/west-commands.yml
 
   remotes:
-    - name: pic64gx-zephyrproject-rtos
+    - name: greenlsi
+      url-base: https://github.com/greenlsi
+    - name: pic64gx
       url-base: https://github.com/pic64gx
-
+      
   projects:
-    - name: pic64gx-zephyr
-      remote: pic64gx-zephyrproject-rtos
-      revision: d5777557c54cec9cd4b3db66e3ff413987eee393
+    - name: zephyr
+      remote: greenlsi
+      revision: dev-pic64gx
       path: zephyr
       import:
         name-allowlist:
           - hal_microchip
           - open-amp
           - libmetal
+          
     - name: pic64gx-rpmsg-lite
       remote: pic64gx-zephyrproject-rtos
       path: modules/lib/rpmsg-lite
