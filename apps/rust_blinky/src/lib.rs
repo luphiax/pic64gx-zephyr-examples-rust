@@ -16,10 +16,12 @@ pub extern "C" fn rust_main() {
 
     unsafe {
         led0.configure(&mut token, raw::ZR_GPIO_OUTPUT_ACTIVE);
+       
     }
 
     loop {
         unsafe { led0.toggle_pin(&mut token); }
+
         unsafe { raw::k_msleep(SLEEP_TIME_MS); }
     }
 }

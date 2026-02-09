@@ -1,6 +1,3 @@
-# Copyright (c) 2024 Microchip Technologies
-# SPDX-License-Identifier: Apache-2.0
-
 manifest:
   self:
     west-commands: scripts/west-commands.yml
@@ -10,22 +7,27 @@ manifest:
       url-base: https://github.com/greenlsi
     - name: pic64gx
       url-base: https://github.com/pic64gx
-      
+    - name: zephyrproject-rtos
+      url-base: https://github.com/zephyrproject-rtos
+
   projects:
     - name: zephyr
       remote: greenlsi
-      revision: dev-pic64gx
+      revision: ab81b5f9757453e4070e94595799d48eaa3f8c11
       path: zephyr
       import:
         name-allowlist:
           - hal_microchip
           - open-amp
           - libmetal
-          
+
+    - name: zephyr-lang-rust
+      remote: zephyrproject-rtos
+      revision: dd73abc242e995784da62352fe8c70d9a6c7ac2e
+      path: modules/lang/rust
+
     - name: pic64gx-rpmsg-lite
-      remote: pic64gx-zephyrproject-rtos
+      remote: pic64gx
       path: modules/lib/rpmsg-lite
       revision: 63229af4a7bd50003968062b4328163c66bf1097
-      #  path-blocklist:
-      #  - name: modules/hal/*
-      #  - name: tools/*
+
