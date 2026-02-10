@@ -1,7 +1,7 @@
 
 # PIC64GX Zephyr + Rust Examples (West Manifest)
 
-This repository provides **Microchip PIC64GX SoC support** for the Zephyr RTOS ecosystem via a **west manifest repository**, including:
+This repository provides **Microchip PIC64GX SoC RUST support** for the Zephyr RTOS ecosystem via a **west manifest repository**, including:
 
 * A `west.yml` manifest that fetches:
 
@@ -306,8 +306,3 @@ To update versions:
 
 ---
 
-## License
-
-See `LICENSE` (if present). Zephyr-related work typically follows Apache-2.0 conventions.
-
----
